@@ -1,15 +1,22 @@
-var express=require('express');
-var app= express();
+var app=require('express')();
 
-app.get('/',function(req,res) {
-	res.send('Hello World!');
+//Handles project page requests
+app.get('/project/:name/:number',function(req,res){
+	if(req.params.name==="all") {
+		//grab the data from the database	
+			
 
 
-});
+	} else {
+		//we are requesting more info on the single project	
+			
 
-var server=app.listen(3000,function() {
-	var host=server.address().address;
-	var port=server.address().port;
+	}
+	res.send("hello");
 	
-	console.log('Listening at http://%s:%s',host,port);
+	
 });
+
+
+app.listen(3000);
+console.log("Server started");

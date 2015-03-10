@@ -1,15 +1,26 @@
 {
-  "name": "server.wangkev.me",
+  "name": "wangkevmeserver",
   "version": "1.0.0",
-  "description": "\"Server for wangkev.me\"",
+  "description": "Server for Wangkev.me",
   "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "\"Kevin (Kun)",
-  "license": "ISC",
   "dependencies": {
-    "express": "^4.11.1",
-    "mysql": "^2.5.4"
-  }
+    "express": "^4.12.2",
+    "mysql": "^2.5.5",
+    "sequelize": "^2.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wangk1/server.wangkev.me.git"
+  },
+  "author": "Kevin Wang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wangk1/server.wangkev.me/issues"
+  },
+  "homepage": "https://github.com/wangk1/server.wangkev.me"
 }
