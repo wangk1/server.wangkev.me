@@ -1,4 +1,5 @@
 var app=require('express')();
+var proj_orm=require('./orm/project.js');
 
 //Handles project page requests
 app.get('/project/:name/:number',function(req,res){
@@ -9,7 +10,8 @@ app.get('/project/:name/:number',function(req,res){
 
 	} else {
 		//we are requesting more info on the single project	
-		
+			
+
 	}
 	res.send("hello");
 	
