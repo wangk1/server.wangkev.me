@@ -1,11 +1,13 @@
 var app=require('express')();
-var proj_orm=require('./orm/projects.js');
+var projects=require('./orm/projects.js').projects;
 
 //Handles project page requests
 app.get('/project/:name/:number',function(req,res){
 	if(req.params.name==="all") {
 		//grab the data from the database	
-			
+		projects.findAll().then(function(data) {
+			console.log(data);	
+		});	
 
 
 	} else {

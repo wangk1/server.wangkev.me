@@ -1,13 +1,14 @@
-//for the project page, all the database orm
+//for the project page, mapping for projects tables
 
 var Sequelize=require('sequelize');
 var seq=require("./connection.js");
 
 
-exports.project=seq.define('projects',{
+exports.projects=seq.define('projects',{
 	id: {
 		type:Sequelize.INTEGER,
-		primaryKey:true
+		primaryKey:true,
+		autoIncrement:true
 	},
 	name: {
 		type:Sequelize.STRING,
@@ -30,6 +31,13 @@ exports.project=seq.define('projects',{
 	url: {
 		type:Sequelize.STRING
 			
+	
+	},
+
+	shortDescription: {
+		type:Sequelize.STRING,
+		field:'short_desc',
+		allowNull:true	
 	
 	}	
 });

@@ -8,8 +8,11 @@ module.exports=new Sequelize('wangkev.me','root','',{
 		min:0,    
     		idle:10000
 	
-	}    
-
+	},
+	//not auto insert timestamp
+	define: {
+		timestamps:false
+	}
 });
 
 
